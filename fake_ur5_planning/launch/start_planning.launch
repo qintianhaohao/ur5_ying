@@ -1,0 +1,7 @@
+<launch>
+  <!-- move obstacle -->
+  <node pkg="fake_ur5_planning" type="moveit_move_obstacle.py" name="move_obstacle"/>
+
+  <!-- move arm -->
+  <node pkg="fake_ur5_planning" type="moveit_dynamic_collision_ur5_3.py" name="move_arm"/>
+</launch>

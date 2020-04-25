@@ -1,0 +1,14 @@
+<launch>
+  <arg name="bag_path" default="/home/tianbot/bagfiles/subset.bag" />
+  
+  <param name="use_sim_time" value="true" />
+
+  <!-- Play the rosbag that contains the pointcloud data -->
+  <node pkg="rosbag" type="play" name="bag_play" args="$(arg bag_path)"/>
+
+  <!-- If needed, broadcast static tf for robot root -->
+  <node pkg="tf" type="static_transform_publisher" name="to_world" args="0 0 0 0 0 0 base_link camera_depth_optical_frame 10" />
+  <!--
+  <node pkg="tf2_ros" type="static_transform_publisher" name="to_panda_base" args="0 0 0 0 0.2 1.92 camera_rgb_optical_frame temp_link" />
+  -->
+</launch>

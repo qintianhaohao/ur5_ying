@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="sim" default="true" doc="use sim time in moveit"/>
+  <arg name="config" default="true" doc="use config in rviz"/>
+
+  <!-- startup gazebo -->
+  <include file="$(find fake_ur5_gazebo)/launch/ur5_with_kinect.launch"/>
+
+  <!-- startup moveit -->
+  <include file="$(find fake_ur5_moveit_config)/launch/ur5_moveit_planning_execution.launch">
+    <arg name="sim" default="$(arg sim)"/>
+  </include>
+
+  <!-- startup rviz -->
+  <include file="$(find fake_ur5_moveit_config)/launch/moveit_rviz.launch">
+    <arg name="config" default="$(arg config)"/>
+  </include>
+
+</launch>
