@@ -59,11 +59,20 @@ roslaunch fake_ur5_planning start_moveit_gazebo_rviz_ur5.launch
 roslaunch fake_ur5_planning start_planning.launch
 ```
 
+# 杨颖测试用
+roslaunch fake_ur5_planning start_moveit_gazebo_rviz_ur5.launch
+
+rosrun fake_ur5_planning moveit_dynamic_collision_ur5_3.py
+
+rosrun fake_ur5_planning moveit_move_obstacle_7.py
+
 # 在gazebo中加入两个turtlebot，并用键盘控制其移动
 ```php
 roslaunch fake_ur5_planning start_moveit_gazebo_rviz_ur5.launch
 
 ROS_NAMESPACE=turtlebot1 roslaunch fake_turtlebot_teleop keyboard_teleop.launch
+
+ROS_NAMESPACE=turtlebot2 roslaunch fake_turtlebot_teleop keyboard_teleop.launch
 ```
 
 

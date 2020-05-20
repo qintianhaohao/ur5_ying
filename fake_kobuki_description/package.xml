@@ -1,5 +1,5 @@
 <package>
-  <name>kobuki_description</name>
+  <name>fake_kobuki_description</name>
   <version>0.7.6</version>
   <description>
       Description of the Kobuki model.

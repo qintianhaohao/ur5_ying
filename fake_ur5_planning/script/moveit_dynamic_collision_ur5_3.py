@@ -39,7 +39,9 @@ class MoveItObstaclesDemo:
         self.arm.set_goal_orientation_tolerance(0.05)
 
         # 当运动规划失败后，允许重新规划
-        self.arm.allow_replanning(True)
+        # self.arm.allow_replanning(True)
+        self.arm.set_num_planning_attempts(10)
+        # self.arm.allow_looking(True)
 
         # 设置目标位置所使用的参考坐标系
         self.reference_frame = 'base_link'

@@ -4,7 +4,8 @@
   <arg name="config" default="true" doc="use config in rviz"/>
 
   <!-- startup gazebo -->
-  <include file="$(find fake_ur5_gazebo)/launch/ur5_with_kinect.launch"/>
+  <!--include file="$(find fake_ur5_gazebo)/launch/ur5_with_kinect.launch"/-->
+  <include file="$(find fake_ur5_gazebo)/launch/ur5.launch"/>
 
   <!-- startup moveit -->
   <include file="$(find fake_ur5_moveit_config)/launch/ur5_moveit_planning_execution.launch">
